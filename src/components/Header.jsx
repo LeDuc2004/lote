@@ -97,6 +97,14 @@ const CustomHeader = () => {
   }, []);
 
   const Bag = useSelector(({ listTable }) => listTable);
+  function calcPrice(arr) {
+    let formatter = new Intl.NumberFormat("vi-VN");
+    let price = 0;
+    arr.forEach((item) => {
+      price = price + Number(item.price.replace(/\./g, "")) * item.quantity;
+    });
+    return formatter.format(price);
+  }
   function handleOpen(text) {
     setNavChose(text);
     setopenNav(!openNav);
@@ -222,6 +230,21 @@ const CustomHeader = () => {
                   </div>
                 ) : (
                   <div>{EmailUser}</div>
+                )}
+                {NavChose == "bag" && Bag?.bag?.length > 0? (
+                  <div
+                    style={{
+                      fontSize: "17px",
+                      color: "#ff5b6a",
+                      fontWeight: 700,
+                      textAlign: "center",
+                    }}
+                  >
+                    Tổng giá tiền:{" "}
+                    {Bag.status == "idle" ? calcPrice(Bag.bag) : ""} đ
+                  </div>
+                ) : (
+                  ""
                 )}
 
                 <Group position="start">

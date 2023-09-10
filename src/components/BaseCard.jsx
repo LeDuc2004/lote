@@ -4,6 +4,7 @@ import { IconHeartFilled, IconTag } from "@tabler/icons-react";
 import { useDispatch, useSelector } from "react-redux";
 import { createTable } from "../store/createTable";
 import { putData } from "../services";
+import { ShowSuccessToast } from "./toast";
 
 const BaseCard = ({ item }) => {
   const dispatch = useDispatch();
@@ -28,29 +29,47 @@ const BaseCard = ({ item }) => {
           return item.name == card.name;
         });
         if (exiting) {
-          let newBag = [
-            ...user.bag,
-            { ...exiting, quantity: exiting.quantity + 1 },
-          ];
+          let newBag = user.bag.map((item) => {
+            if (item.name == exiting.name) {
+              return {
+                ...item,
+                quantity: item.quantity + 1,
+              };
+            }
+            return item;
+          });
           let newUser = {
             ...user,
             bag: newBag,
           };
-          fetch(`http://localhost:3000/user/${user.id}`, {
+          fetch(`http://localhost:3000/users/${user.id}`, {
             method: "PUT",
             headers: {
               "Content-Type": "application/json",
               authorization: `Beaer ${localStorage.getItem("token")}`,
             },
             body: JSON.stringify(newUser),
-          });
+          })
+          ShowSuccessToast("Thêm vào giỏ hàng thành công")
+          dispatch(createTable.actions.updateBag(newBag));
         } else {
-          let newBag = [item];
-          console.log(newBag);
+          let newBag = [...user.bag, { ...card, quantity: 1 }];
+          let newUser = {
+            ...user,
+            bag: newBag,
+          };
+          fetch(`http://localhost:3000/users/${user.id}`, {
+            method: "PUT",
+            headers: {
+              "Content-Type": "application/json",
+              authorization: `Beaer ${localStorage.getItem("token")}`,
+            },
+            body: JSON.stringify(newUser),
+          })
+          ShowSuccessToast("Thêm vào giỏ hàng thành công")
+          dispatch(createTable.actions.addProduct({ ...card, quantity: 1 }));
         }
       });
-    // dispatch(createTable.actions.updateBag(user.bag));
-    // dispatch(createTable.actions.addProduct(item))
   }
   return (
     <Card shadow="sm" padding="md" radius="md" withBorder mih={320} mah={521}>
