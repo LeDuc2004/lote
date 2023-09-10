@@ -1,28 +1,27 @@
-import "../scss/toast.scss"
-function toast({ title = "", message = "", type = "", duration = 3000 }) {
-    const main = document.getElementById("toast");
-    if (main) {
-        const autoRemoveId = setTimeout(() => {
-            main.removeChild( toast)
-        }, duration);
-      const toast = document.createElement("div");
-      toast.onclick = function (e) {
-        if (e.target.closest(".toast__close")){
-            main.removeChild(toast)
-            clearTimeout(autoRemoveId)
-        }
-        
+import "../scss/toast.scss";
+function toast({ title = "", message = "", type = "", duration = 2000 }) {
+  const main = document.getElementById("toast");
+  if (main) {
+    const autoRemoveId = setTimeout(() => {
+      main.removeChild(toast);
+    }, duration);
+    const toast = document.createElement("div");
+    toast.onclick = function (e) {
+      if (e.target.closest(".toast__close")) {
+        main.removeChild(toast);
+        clearTimeout(autoRemoveId);
       }
-      const icons = {
-        success:"fa-solid fa-circle-check",
-        info:"fa-solid fa-circle-info",
-        error:"fa-solid fa-circle-exclamation"
-      }
-      const icon = icons[type]
+    };
+    const icons = {
+      success: "fa-solid fa-circle-check",
+      info: "fa-solid fa-circle-info",
+      error: "fa-solid fa-circle-exclamation",
+    };
+    const icon = icons[type];
     //   const delay = (duration / 1000).toFixed(2)
-      toast.classList.add("toast" , `toast--${type}`);
+    toast.classList.add("toast", `toast--${type}`);
     //   toast.style.animation =` slideInLeft ease .3s ,fadeout linear 1s ${delay}s forwards`;
-      toast.innerHTML = `
+    toast.innerHTML = `
         
     <div class="toast__icon">
       <i class="${icon}"></i>
@@ -36,34 +35,32 @@ function toast({ title = "", message = "", type = "", duration = 3000 }) {
     </div>
   
         `;
-        main.appendChild(toast);
-       
-    }
+    main.appendChild(toast);
   }
+}
 
-
- export function ShowSuccessToast(text) {
+export function ShowSuccessToast(text) {
   console.log("goi");
-    toast({
+  toast({
     title: "Success",
     message: text,
     type: "success",
-    duration: 4000,
+    duration: 2000,
   });
-  }
-  export  function ShowErrorToast(text) {
-    toast({
+}
+export function ShowErrorToast(text) {
+  toast({
     title: "Error",
     message: text,
     type: "error",
-    duration: 4000,
+    duration: 2000,
   });
-  }
-  export function ShowInfoToast(text) {
-    toast({
+}
+export function ShowInfoToast(text) {
+  toast({
     title: "Thông báo",
     message: text,
     type: "info",
-    duration: 4000,
+    duration: 2000,
   });
-  }
+}

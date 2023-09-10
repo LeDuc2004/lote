@@ -1,0 +1,21 @@
+#giohang {
+  padding: 10px;
+  padding-top: 5px;
+  position: relative;
+}
+#giohang::after {
+  content: attr(data-filter);
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  border-radius: 50%;
+  background-color: red;
+  top: -2px;
+  left: 28px;
+  line-height: 1;
+  font-weight: 600;
+  color: white;
+}
