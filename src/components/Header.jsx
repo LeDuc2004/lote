@@ -188,10 +188,6 @@ const CustomHeader = () => {
 
         <Box style={{ display: "flex" }}>
           <Box className="i18nDay" w={40} h={40} mx={30}>
-            <select>
-              <option value=""> Tiếng Việt </option>
-              <option value="">Tiếng Anh</option>
-            </select>
           </Box>
           <Box w={40} h={40} mx={30} className={classes.icon}>
             <NavLink to={"/admin"}>
@@ -199,7 +195,7 @@ const CustomHeader = () => {
                 p={10}
                 src="https://www.lotteria.vn/grs-static/images/icon-myaccount.svg"
                 alt="LOGO LOTE"
-                // onClick={() => handleOpen("login")}
+                onClick={() => handleOpen("login")}
               />
             </NavLink>
           </Box>
@@ -282,7 +278,7 @@ const CustomHeader = () => {
 
                 <Group position="start">
                   {NavChose == "bag" ? (
-                    <TableConform price={calcPrice(Bag.bag)} />
+                   <TableConform price={calcPrice(Bag.bag)}/>
                   ) : (
                     <Button
                       component="a"
@@ -291,6 +287,7 @@ const CustomHeader = () => {
                       onClick={() => logout()}
                       w={"100%"}
                       color="red"
+                      style={{color:"white"}}
                     >
                       Đăng xuất
                     </Button>

@@ -84,7 +84,19 @@
       "email": "daovanhieu204@gmail.com",
       "password": "11111111",
       "bag": [],
-      "id": 5
+      "id": 2
+    },
+    {
+      "email": "2bingo2004@gmail.com",
+      "password": "123456",
+      "bag": [],
+      "id": 3
+    },
+    {
+      "email": "5bingo2004@gmail.com",
+      "password": "123456",
+      "bag": [],
+      "id": 4
     }
   ],
   "bestseller": [
