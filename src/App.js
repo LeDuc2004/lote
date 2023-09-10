@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import { MantineProvider, Text } from "@mantine/core";
+import { useState } from "react";
+import {
+  AppShell,
+  Navbar,
+  Header,
+  Footer,
+  Aside,
+  MediaQuery,
+  Burger,
+  useMantineTheme,
+} from "@mantine/core";
+import CustomHeader from "./components/Header";
+import CustomFooter from "./components/Footer";
+import Body from "./components/Body";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <MantineProvider withGlobalStyles withNormalizeCSS>
+      <AppShell
+        styles={{
+          main: {
+            height:"100vh",
+            padding: 0,
+            paddingTop: "var(--mantine-header-height, 0px)",
+          },
+        }}
+        navbarOffsetBreakpoint="sm"
+        asideOffsetBreakpoint="sm"
+      >
+        <Body />
+      </AppShell>
+    </MantineProvider>
   );
 }
-
-export default App;

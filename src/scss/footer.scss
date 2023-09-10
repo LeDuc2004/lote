@@ -1,0 +1,40 @@
+.f-top {
+  background-color: #ffeae3;
+  display: flex;
+  width: 100%;
+  height: 277px;
+  justify-content: space-around;
+  align-items: start;
+  padding: 0 100px;
+  padding-top: 35px;
+  h4{
+    margin: 10px 0;
+  }
+  .column-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80%;
+    img {
+      width: 85px;
+      aspect-ratio: 1/1;
+    }
+    h3 {
+      font-size: 18px;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+      text-align: center;
+      font-weight: 700;
+    }
+  }
+}
+.f-bottom {
+    background-color: #FF9EA2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+    font-weight: 700;
+    font-size: 14px;
+}
