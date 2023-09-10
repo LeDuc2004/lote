@@ -5,16 +5,10 @@ import { IMGCAROSEL } from "../context/contain";
 
 const CarouselCustom = () => {
   return (
-    <Carousel w={"100%"} loop withIndicators height={350}>
+    <Carousel w={"100%"} loop withIndicators height={400}>
       {IMGCAROSEL.map(({ img, title }) => (
         <Carousel.Slide>
-          <Image
-            mah={"100%"}
-            p={10}
-            src={img}
-            alt={title}
-            fit="fill"
-          />
+           <img style={{width:"100%",height:"100%"}} src={img} alt="" />
         </Carousel.Slide>
       ))}
     </Carousel>

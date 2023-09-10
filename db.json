@@ -3,26 +3,7 @@
     {
       "email": "1bingo2004@gmail.com",
       "password": "123456",
-      "bag": [
-        {
-          "id": 1,
-          "img": "/bestSeller/menu_cheese.jpg",
-          "name": "Gà Sốt Phô Mai Phần Upsize",
-          "detail": ["02 gà sốt PM", "01 Khoai tây lắc"],
-          "tym": false,
-          "price": "93.000",
-          "discount": "133.000 đ"
-        },
-        {
-          "id": 2,
-          "img": "/bestSeller/menu_combo_l_chicken.jpg",
-          "name": "Combo Burger LChicken Up",
-          "detail": ["01 Burger Tôm", "01 Khoai tây lắc"],
-          "tym": false,
-          "price": "82.000",
-          "discount": "103.000 đ"
-        }
-      ],
+      "bag": [],
       "id": 1
     },
     {

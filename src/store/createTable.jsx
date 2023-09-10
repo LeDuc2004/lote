@@ -2,10 +2,19 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
 export const createTable = createSlice({
   name: "table",
-  initialState: { status: "loading", bestSeller: [], bag: [] ,fastfood:[],drinks:[]},
+  initialState: {
+    status: "loading",
+    bestSeller: [],
+    bag: [],
+    fastfood: [],
+    drinks: [],
+  },
   reducers: {
     updateBag: (state, action) => {
       state.bag = action.payload;
+    },
+    addProduct: (state, action) => {
+      state.bag.push(action.payload);
     },
   },
   extraReducers: (builder) => {
@@ -62,16 +71,13 @@ export const fetchFastfood = createAsyncThunk(
   }
 );
 
-export const fetchDrinks = createAsyncThunk(
-  "table/fetchDrinks",
-  async () => {
-    const res = await fetch(`http://localhost:3000/drinks`, {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
-    let data = await res.json();
-    return data;
-  }
-);
+export const fetchDrinks = createAsyncThunk("table/fetchDrinks", async () => {
+  const res = await fetch(`http://localhost:3000/drinks`, {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+  let data = await res.json();
+  return data;
+});
