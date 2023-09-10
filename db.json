@@ -89,17 +89,7 @@
     {
       "email": "2bingo2004@gmail.com",
       "password": "123456",
-      "bag": [
-        {
-          "id": 1,
-          "img": "/burger/BG_New-02_6.jpg",
-          "name": "Burger Double Double",
-          "tym": false,
-          "price": "74.000",
-          "type": "fastfood",
-          "quantity": 1
-        }
-      ],
+      "bag": [],
       "id": 3
     },
     {

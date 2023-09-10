@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import "../scss/giohang.scss";
 import {
   Header,
   MediaQuery,
@@ -19,6 +20,8 @@ import { Group, rem } from "@mantine/core";
 import { IconBrandTwitter } from "@tabler/icons-react";
 import { createTable, fetchBestSeller } from "../store/createTable";
 import CardBag from "./CardBag";
+import openDeleteModal from "./TableConform";
+import TableConform from "./TableConform";
 
 const useStyles = createStyles((theme) => ({
   BaseAnchor: {
@@ -176,12 +179,16 @@ const CustomHeader = () => {
             />
           </Box>
           <Box w={40} h={40} mx={30} className={classes.icon}>
-            <Image
-              p={10}
-              src="https://www.lotteria.vn/grs-static/images/icon-cart.svg"
-              alt="LOGO LOTE"
-              onClick={() => handleOpen("bag")}
-            />
+            <div
+              id="giohang"
+              data-filter={Bag.bag.length > 0 ? Bag.bag.length : 0}
+            >
+              <img
+                onClick={() => handleOpen("bag")}
+                src="https://www.lotteria.vn/grs-static/images/icon-cart.svg"
+                alt=""
+              />
+            </div>
           </Box>
         </Box>
       </Grid>
@@ -231,7 +238,7 @@ const CustomHeader = () => {
                 ) : (
                   <div>{EmailUser}</div>
                 )}
-                {NavChose == "bag" && Bag?.bag?.length > 0? (
+                {NavChose == "bag" && Bag?.bag?.length > 0 ? (
                   <div
                     style={{
                       fontSize: "17px",
@@ -249,23 +256,12 @@ const CustomHeader = () => {
 
                 <Group position="start">
                   {NavChose == "bag" ? (
-                    <Button
-                      component="a"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      href="https://twitter.com/mantinedev"
-                      onClick={() => logout()}
-                      w={"100%"}
-                      color="red"
-                    >
-                      Thanh Toán
-                    </Button>
+                   <TableConform price={calcPrice(Bag.bag)}/>
                   ) : (
                     <Button
                       component="a"
                       target="_blank"
                       rel="noopener noreferrer"
-                      href="https://twitter.com/mantinedev"
                       onClick={() => logout()}
                       w={"100%"}
                       color="red"

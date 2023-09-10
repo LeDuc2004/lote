@@ -1,6 +1,5 @@
 import React from "react";
 import { Carousel } from "@mantine/carousel";
-import { Image } from "@mantine/core";
 import { IMGCAROSEL } from "../context/contain";
 
 const CarouselCustom = () => {
