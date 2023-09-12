@@ -8,6 +8,7 @@ export const createTable = createSlice({
     bag: [],
     fastfood: [],
     drinks: [],
+    // products: [],
   },
   reducers: {
     updateBag: (state, action) => {
@@ -16,6 +17,9 @@ export const createTable = createSlice({
     addProduct: (state, action) => {
       state.bag.push(action.payload);
     },
+    // getProduct: (state, action) => {
+    //   state.products.push(action.payload);
+    // },
   },
   extraReducers: (builder) => {
     builder
@@ -40,6 +44,13 @@ export const createTable = createSlice({
         state.drinks = action.payload;
         state.status = "idle";
       });
+    //    .addCase(fetchProducts.pending, (state, action) => {
+    //   state.status = "loading";
+    // })
+    // .addCase(fetchProducts.fulfilled, (state, action) => {
+    //   state.drinks = action.payload;
+    //   state.status = "idle";
+    // })
   },
 });
 

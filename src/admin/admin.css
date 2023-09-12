@@ -1,0 +1,85 @@
+.adminCss {
+    padding: 30px;
+    display: flex;
+    max-width: 100%;
+    gap: 5%;
+}
+
+.renderDataDasboard {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: 75%;
+    max-width: 100%;
+}
+
+.renderDataDasboard ul li, .categoriesAdmin ul li {
+    list-style: none;
+}
+
+.categoriesAdmin {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: 20%;
+    font-size: 20px;
+    font-weight: 600;
+    height: 500px;
+}
+
+.categoriesAdmin ul {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.categoriesAdmin ul li:hover {
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+    cursor: pointer;
+}
+
+.idAdmin {
+    width: 5%;
+}
+
+.nameAdmin {
+    width: 15%;
+}
+
+.imageAdmin {
+    width: 15%;
+}
+
+.priceAdmin {
+    width: 10%;
+}
+
+.detailAdmin {
+    width: 35%;
+}
+
+.actionAdmin {
+    width: 10%;
+    text-align: right;
+
+
+}
+
+.actionAdmin ul {
+    display: flex;
+    gap: 20px;
+}
+
+.actionAdmin ul li {
+    padding: 5px 10px;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.editProductAdmin {
+    background-color: green;
+    color: #fff;
+}
+
+.deleteProductAdmin {
+    background-color: red;
+    color: rgb(255, 255, 255);
+}

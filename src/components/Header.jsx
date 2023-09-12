@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "../scss/giohang.scss";
+import { useTranslation } from "react-i18next";
+import { locales } from "../i18n/i18next";
+
 import {
   Header,
   MediaQuery,
@@ -22,6 +25,7 @@ import { createTable, fetchBestSeller } from "../store/createTable";
 import CardBag from "./CardBag";
 import openDeleteModal from "./TableConform";
 import TableConform from "./TableConform";
+import { NavLink } from "react-router-dom";
 
 const useStyles = createStyles((theme) => ({
   BaseAnchor: {
@@ -117,6 +121,18 @@ const CustomHeader = () => {
     localStorage.setItem("token", "");
     window.location.href = "/";
   }
+
+  const { t, i18n } = useTranslation();
+  const currentLanguage = locales[i18n.language];
+  console.log(currentLanguage);
+
+  const changeLanguage = (lng) => {
+    if (lng === "en" || lng === "vi") {
+      i18n.changeLanguage(lng);
+    } else {
+      console.error("Unsupported language:", lng);
+    }
+  };
   return (
     <Header height={{ base: 100 }} px="md">
       <Grid
@@ -154,8 +170,9 @@ const CustomHeader = () => {
               }
               href="/fastfood"
             >
-              FAST FOOD
+              ĐỒ ĂN NHANH
             </Anchor>
+
             <Anchor
               className={
                 pathName.includes("/drinks")
@@ -164,19 +181,27 @@ const CustomHeader = () => {
               }
               href="/drinks"
             >
-              DRINKS
+              ĐỒ UỐNG
             </Anchor>
           </Flex>
         </Box>
 
         <Box style={{ display: "flex" }}>
+          <Box className="i18nDay" w={40} h={40} mx={30}>
+            <select>
+              <option value=""> Tiếng Việt </option>
+              <option value="">Tiếng Anh</option>
+            </select>
+          </Box>
           <Box w={40} h={40} mx={30} className={classes.icon}>
-            <Image
-              p={10}
-              src="https://www.lotteria.vn/grs-static/images/icon-myaccount.svg"
-              alt="LOGO LOTE"
-              onClick={() => handleOpen("login")}
-            />
+            <NavLink to={"/admin"}>
+              <Image
+                p={10}
+                src="https://www.lotteria.vn/grs-static/images/icon-myaccount.svg"
+                alt="LOGO LOTE"
+                // onClick={() => handleOpen("login")}
+              />
+            </NavLink>
           </Box>
           <Box w={40} h={40} mx={30} className={classes.icon}>
             <div
@@ -192,6 +217,7 @@ const CustomHeader = () => {
           </Box>
         </Box>
       </Grid>
+
       {token ? (
         <Drawer.Root
           mt={100}
@@ -256,7 +282,7 @@ const CustomHeader = () => {
 
                 <Group position="start">
                   {NavChose == "bag" ? (
-                   <TableConform price={calcPrice(Bag.bag)}/>
+                    <TableConform price={calcPrice(Bag.bag)} />
                   ) : (
                     <Button
                       component="a"

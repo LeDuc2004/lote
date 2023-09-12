@@ -71,7 +71,7 @@ app.post("/login", (req, res) => {
         for (let i = 0; i < data.length; i++) {
           if (data[i].email == user.email) {
             if (data[i].password == user.password) {
-              const accessToken = jwt.sign(data[i], "levanduc");
+              const accessToken = jwt.sign(data[i], "daovanhieu");
               res.status(200).send({ accessToken, status: "right" });
               return;
             } else {
@@ -96,12 +96,12 @@ function authenToken(req, res, next) {
   const authorization = req.headers.authorization;
   const token = authorization.split(" ")[1];
   if (!token) res.send(401);
-  jwt.verify(token, "levanduc", (err, data) => {
+  jwt.verify(token, "daovanhieu", (err, data) => {
     if (data) {
       req.user = data;
       next();
     } else {
-      res.send(404);
+      res.sendStatus(404);
     }
   });
 }

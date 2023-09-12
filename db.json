@@ -81,22 +81,10 @@
       "id": 1
     },
     {
-      "email": "3bigno@gmail.com",
-      "password": "123456",
+      "email": "daovanhieu204@gmail.com",
+      "password": "11111111",
       "bag": [],
-      "id": 2
-    },
-    {
-      "email": "2bingo2004@gmail.com",
-      "password": "123456",
-      "bag": [],
-      "id": 3
-    },
-    {
-      "email": "5bingo2004@gmail.com",
-      "password": "123456",
-      "bag": [],
-      "id": 4
+      "id": 5
     }
   ],
   "bestseller": [
@@ -225,7 +213,8 @@
       "name": "Burger Mozzarella",
       "tym": false,
       "price": "86.000",
-      "type": "fastfood"
+      "type": "fastfood",
+      "detail": []
     },
     {
       "id": 1,
@@ -233,7 +222,8 @@
       "name": "Burger Double Double",
       "tym": false,
       "price": "74.000",
-      "type": "fastfood"
+      "type": "fastfood",
+      "detail": []
     },
     {
       "id": 2,
@@ -241,7 +231,8 @@
       "name": "Burger Tôm Kèm Côca",
       "tym": false,
       "price": "50.000",
-      "type": "fastfood"
+      "type": "fastfood",
+      "detail": []
     },
     {
       "id": 3,
@@ -249,7 +240,8 @@
       "name": "Burger Bulgogi",
       "tym": false,
       "price": "48.000",
-      "type": "fastfood"
+      "type": "fastfood",
+      "detail": []
     },
     {
       "id": 4,
@@ -257,7 +249,8 @@
       "name": "Burger Tôm",
       "tym": false,
       "price": "48.000",
-      "type": "fastfood"
+      "type": "fastfood",
+      "detail": []
     },
     {
       "id": 5,
@@ -265,7 +258,8 @@
       "name": "Burger Double Double 2XL",
       "tym": false,
       "price": "100.000",
-      "type": "fastfood"
+      "type": "fastfood",
+      "detail": []
     },
     {
       "id": 6,
@@ -273,7 +267,8 @@
       "name": "Burger Bò",
       "tym": false,
       "price": "35.000",
-      "type": "fastfood"
+      "type": "fastfood",
+      "detail": []
     },
     {
       "id": 7,
@@ -281,7 +276,8 @@
       "name": "Burger LChicken",
       "tym": false,
       "price": "50.000",
-      "type": "fastfood"
+      "type": "fastfood",
+      "detail": []
     }
   ],
   "drinks": [
@@ -290,56 +286,65 @@
       "img": "/drink/ld0002_5.png",
       "name": "Pepsi (L)",
       "price": "18.000",
-      "type": "drinks"
+      "type": "drinks",
+      "detail": []
     },
     {
       "id": 1,
       "img": "/drink/ld0004_5.png",
       "name": "7 UP (L)",
       "price": "18.000",
-      "type": "drinks"
+      "type": "drinks",
+      "detail": []
     },
     {
       "id": 2,
       "img": "/drink/ld0022_5.png",
       "name": "Nước Cam",
       "price": "27.000",
-      "type": "drinks"
+      "type": "drinks",
+      "detail": []
     },
     {
       "id": 3,
       "img": "/drink/ld0026_5.png",
       "name": "Mirinda (L)",
       "price": "18.000",
-      "type": "drinks"
+      "type": "drinks",
+      "detail": []
     },
     {
       "id": 4,
       "img": "/drink/ld0068_6.png",
       "name": "Pepsi (M)",
       "price": "14.000",
-      "type": "drinks"
+      "type": "drinks",
+      "detail": []
     },
     {
       "id": 5,
       "img": "/drink/ld0089_4.png",
       "name": "Trà Lipton",
       "price": "18.000",
-      "type": "drinks"
+      "type": "drinks",
+      "detail": []
     },
     {
       "id": 6,
       "img": "/drink/ld0026_5.png",
       "name": "Mirinda (M)",
       "price": "14.000",
-      "type": "drinks"
+      "type": "drinks",
+      "detail": []
     },
     {
       "id": 7,
       "img": "/drink/ld0092_2.jpg",
       "name": "Pepsi Zero(L)",
       "price": "18.000",
-      "type": "drinks"
+      "type": "drinks",
+      "detail": []
     }
-  ]
+  ],
+  "products": []
 }
