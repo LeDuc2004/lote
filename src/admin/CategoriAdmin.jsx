@@ -1,14 +1,14 @@
 import React from "react";
 
-function CategoriAdmin() {
+function CategoriAdmin({ onCategoryClick }) {
   return (
     <div className="categoriesAdmin">
       <ul>
-        <li> Products </li>
-        <li> Add Product </li>
-        <li>Categories</li>
-        <li>Order </li>
-        <li>Log out </li>
+        <li onClick={() => onCategoryClick("products")}> Products </li>
+        <li onClick={() => onCategoryClick("addProduct")}> Add Product </li>
+        <li onClick={() => onCategoryClick("categories")}> Categories</li>
+        <li onClick={() => onCategoryClick("order")}>Order </li>
+        <li onClick={() => onCategoryClick("logout")}>Log out </li>
       </ul>
     </div>
   );

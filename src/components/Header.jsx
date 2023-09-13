@@ -187,8 +187,7 @@ const CustomHeader = () => {
         </Box>
 
         <Box style={{ display: "flex" }}>
-          <Box className="i18nDay" w={40} h={40} mx={30}>
-          </Box>
+          <Box className="i18nDay" w={40} h={40} mx={30}></Box>
           <Box w={40} h={40} mx={30} className={classes.icon}>
             <NavLink to={"/admin"}>
               <Image
@@ -258,7 +257,29 @@ const CustomHeader = () => {
                       : ""}
                   </div>
                 ) : (
-                  <div>{EmailUser}</div>
+                  <div>
+                    <div>{EmailUser}</div>
+                    {EmailUser == "daovanhieu204@gmail.com" ? (
+                      <a
+                        href="/admin"
+                        style={{
+                          border: 0,
+                          padding: "8px 15px",
+                          color: "white",
+                          backgroundColor: "#fa5252",
+                          borderRadius: 5,
+                          marginTop: 10,
+                          display: "block",
+                          textDecoration: "none",
+                          maxWidth: 126,
+                        }}
+                      >
+                        Trang quản lý
+                      </a>
+                    ) : (
+                      ""
+                    )}
+                  </div>
                 )}
                 {NavChose == "bag" && Bag?.bag?.length > 0 ? (
                   <div
@@ -278,7 +299,7 @@ const CustomHeader = () => {
 
                 <Group position="start">
                   {NavChose == "bag" ? (
-                   <TableConform price={calcPrice(Bag.bag)}/>
+                    <TableConform price={calcPrice(Bag.bag)} />
                   ) : (
                     <Button
                       component="a"
@@ -287,7 +308,7 @@ const CustomHeader = () => {
                       onClick={() => logout()}
                       w={"100%"}
                       color="red"
-                      style={{color:"white"}}
+                      style={{ color: "white" }}
                     >
                       Đăng xuất
                     </Button>

@@ -1,5 +1,5 @@
 import "../scss/toast.scss";
-function toast({ title = "", message = "", type = "", duration = 2000 }) {
+function toast({ title = "", message = "", type = "", duration = 4000 }) {
   const main = document.getElementById("toast");
   if (main) {
     const autoRemoveId = setTimeout(() => {
@@ -40,12 +40,11 @@ function toast({ title = "", message = "", type = "", duration = 2000 }) {
 }
 
 export function ShowSuccessToast(text) {
-  console.log("goi");
   toast({
     title: "Success",
     message: text,
     type: "success",
-    duration: 2000,
+    duration: 4000,
   });
 }
 export function ShowErrorToast(text) {
@@ -53,7 +52,7 @@ export function ShowErrorToast(text) {
     title: "Error",
     message: text,
     type: "error",
-    duration: 2000,
+    duration: 4000,
   });
 }
 export function ShowInfoToast(text) {
@@ -61,6 +60,6 @@ export function ShowInfoToast(text) {
     title: "Thông báo",
     message: text,
     type: "info",
-    duration: 2000,
+    duration: 4000,
   });
 }

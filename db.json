@@ -5,60 +5,57 @@
       "password": "123456",
       "bag": [
         {
+          "id": 2,
+          "img": "/bestSeller/menu_combo_l_chicken.jpg",
+          "name": "Combo Burger LChicken Up",
+          "detail": ["01 Burger Tôm", "01 Khoai tây lắc"],
+          "tym": false,
+          "price": "82.000",
+          "discount": "103.000 đ",
+          "type": "bestseller",
+          "quantity": 2
+        },
+        {
+          "id": 0,
+          "img": "/bestSeller/menu_buffalo.jpg",
+          "name": "Gà Sốt HS Phần Upsize",
+          "detail": ["02 gà sốt HS", "01 Khoai tây lắc"],
+          "tym": false,
+          "price": "93.000",
+          "discount": "133.000 đ",
+          "type": "bestseller",
+          "quantity": 1
+        },
+        {
+          "id": 4,
+          "img": "/bestSeller/menu_ganuong_copy.jpg",
+          "name": "Gà Nướng Phần Upsize",
+          "detail": ["02 gà nướng", "01 Khoai tây lắc"],
+          "tym": false,
+          "price": "82.000",
+          "discount": "103.000 đ",
+          "type": "bestseller",
+          "quantity": 1
+        },
+        {
+          "id": 3,
+          "img": "/bestSeller/menu_fried.jpg",
+          "name": "Gà Rán Phần Upsize",
+          "detail": ["02 gà rán", "01 Khoai tây lắc"],
+          "tym": false,
+          "price": "83.000",
+          "discount": "137.000 đ",
+          "type": "bestseller",
+          "quantity": 1
+        },
+        {
           "id": 1,
           "img": "/drink/ld0004_5.png",
           "name": "7 UP (L)",
           "price": "18.000",
           "type": "drinks",
-          "quantity": 8
-        },
-        {
-          "id": 7,
-          "img": "/drink/ld0092_2.jpg",
-          "name": "Pepsi Zero(L)",
-          "price": "18.000",
-          "type": "drinks",
-          "quantity": 2
-        },
-        {
-          "id": 5,
-          "img": "/drink/ld0089_4.png",
-          "name": "Trà Lipton",
-          "price": "18.000",
-          "type": "drinks",
+          "detail": [],
           "quantity": 1
-        },
-        {
-          "id": 4,
-          "img": "/drink/ld0068_6.png",
-          "name": "Pepsi (M)",
-          "price": "14.000",
-          "type": "drinks",
-          "quantity": 2
-        },
-        {
-          "id": 2,
-          "img": "/drink/ld0022_5.png",
-          "name": "Nước Cam",
-          "price": "27.000",
-          "type": "drinks",
-          "quantity": 7
-        },
-        {
-          "id": 3,
-          "img": "/drink/ld0026_5.png",
-          "name": "Mirinda (L)",
-          "price": "18.000",
-          "type": "drinks",
-          "quantity": 4
-        },
-        {
-          "id": 6,
-          "img": "/drink/ld0026_5.png",
-          "name": "Mirinda (M)",
-          "price": "14.000",
-          "type": "drinks",
-          "quantity": 2
         },
         {
           "id": 0,
@@ -66,15 +63,7 @@
           "name": "Pepsi (L)",
           "price": "18.000",
           "type": "drinks",
-          "quantity": 3
-        },
-        {
-          "id": 2,
-          "img": "/burger/BG_New-03_3.jpg",
-          "name": "Burger Tôm Kèm Côca",
-          "tym": false,
-          "price": "50.000",
-          "type": "fastfood",
+          "detail": [],
           "quantity": 1
         }
       ],
@@ -84,7 +73,7 @@
       "email": "daovanhieu204@gmail.com",
       "password": "11111111",
       "bag": [],
-      "id": 2
+      "id": 9999
     },
     {
       "email": "2bingo2004@gmail.com",
@@ -104,10 +93,7 @@
       "id": 0,
       "img": "/bestSeller/menu_buffalo.jpg",
       "name": "Gà Sốt HS Phần Upsize",
-      "detail": [
-        "02 gà sốt HS",
-        "01 Khoai tây lắc"
-      ],
+      "detail": ["02 gà sốt HS", "01 Khoai tây lắc"],
       "tym": false,
       "price": "93.000",
       "discount": "133.000 đ",
@@ -117,10 +103,7 @@
       "id": 1,
       "img": "/bestSeller/menu_cheese.jpg",
       "name": "Gà Sốt Phô Mai Phần Upsize",
-      "detail": [
-        "02 gà sốt PM",
-        "01 Khoai tây lắc"
-      ],
+      "detail": ["02 gà sốt PM", "01 Khoai tây lắc"],
       "tym": false,
       "price": "93.000",
       "discount": "133.000 đ",
@@ -130,10 +113,7 @@
       "id": 2,
       "img": "/bestSeller/menu_combo_l_chicken.jpg",
       "name": "Combo Burger LChicken Up",
-      "detail": [
-        "01 Burger Tôm",
-        "01 Khoai tây lắc"
-      ],
+      "detail": ["01 Burger Tôm", "01 Khoai tây lắc"],
       "tym": false,
       "price": "82.000",
       "discount": "103.000 đ",
@@ -143,10 +123,7 @@
       "id": 3,
       "img": "/bestSeller/menu_fried.jpg",
       "name": "Gà Rán Phần Upsize",
-      "detail": [
-        "02 gà rán",
-        "01 Khoai tây lắc"
-      ],
+      "detail": ["02 gà rán", "01 Khoai tây lắc"],
       "tym": false,
       "price": "83.000",
       "discount": "137.000 đ",
@@ -156,10 +133,7 @@
       "id": 4,
       "img": "/bestSeller/menu_ganuong_copy.jpg",
       "name": "Gà Nướng Phần Upsize",
-      "detail": [
-        "02 gà nướng",
-        "01 Khoai tây lắc"
-      ],
+      "detail": ["02 gà nướng", "01 Khoai tây lắc"],
       "tym": false,
       "price": "82.000",
       "discount": "103.000 đ",
@@ -169,36 +143,17 @@
       "id": 5,
       "img": "/bestSeller/menu_h_s.jpg",
       "name": "Gà Sốt HS Phần Upsize",
-      "detail": [
-        "02 gà sốt HS",
-        "01 Khoai tây lắc"
-      ],
+      "detail": ["02 gà sốt HS", "01 Khoai tây lắc"],
       "tym": false,
       "price": "93.000",
       "discount": "103.000 đ",
       "type": "bestseller"
     },
     {
-      "id": 6,
-      "img": "/bestSeller/menu_soybean.jpg",
-      "name": "Gà Sốt Đậu Phộng Phần Upsize",
-      "detail": [
-        "02 gà sốt ĐP",
-        "01 Khoai tây lắc"
-      ],
-      "tym": false,
-      "price": "93.000",
-      "discount": "133.000 đ",
-      "type": "bestseller"
-    },
-    {
       "id": 7,
       "img": "/bestSeller/menu_soybean.jpg",
       "name": "Gà Sốt Đậu Phộng Phần Upsize",
-      "detail": [
-        "02 gà sốt ĐP",
-        "01 Khoai tây lắc"
-      ],
+      "detail": ["02 gà sốt ĐP", "01 Khoai tây lắc"],
       "tym": false,
       "price": "93.000",
       "discount": "133.000 đ",
@@ -208,10 +163,7 @@
       "id": 8,
       "img": "/bestSeller/menu_buffalo.jpg",
       "name": "Gà Sốt HS Phần Upsize",
-      "detail": [
-        "02 gà sốt HS",
-        "01 Khoai tây lắc"
-      ],
+      "detail": ["02 gà sốt HS", "01 Khoai tây lắc"],
       "tym": false,
       "price": "93.000",
       "discount": "133.000 đ",
@@ -281,46 +233,13 @@
       "price": "35.000",
       "type": "fastfood",
       "detail": []
-    },
-    {
-      "id": 7,
-      "img": "/burger/lb0047-online_4.png",
-      "name": "Burger LChicken",
-      "tym": false,
-      "price": "50.000",
-      "type": "fastfood",
-      "detail": []
     }
   ],
   "drinks": [
     {
-      "id": 0,
-      "img": "/drink/ld0002_5.png",
-      "name": "Pepsi (L)",
-      "price": "18.000",
-      "type": "drinks",
-      "detail": []
-    },
-    {
       "id": 1,
       "img": "/drink/ld0004_5.png",
       "name": "7 UP (L)",
-      "price": "18.000",
-      "type": "drinks",
-      "detail": []
-    },
-    {
-      "id": 2,
-      "img": "/drink/ld0022_5.png",
-      "name": "Nước Cam",
-      "price": "27.000",
-      "type": "drinks",
-      "detail": []
-    },
-    {
-      "id": 3,
-      "img": "/drink/ld0026_5.png",
-      "name": "Mirinda (L)",
       "price": "18.000",
       "type": "drinks",
       "detail": []
@@ -348,15 +267,6 @@
       "price": "14.000",
       "type": "drinks",
       "detail": []
-    },
-    {
-      "id": 7,
-      "img": "/drink/ld0092_2.jpg",
-      "name": "Pepsi Zero(L)",
-      "price": "18.000",
-      "type": "drinks",
-      "detail": []
     }
-  ],
-  "products": []
+  ]
 }

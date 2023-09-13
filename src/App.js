@@ -16,7 +16,7 @@ import Body from "./components/Body";
 import { ModalsProvider } from "@mantine/modals";
 export default function App() {
   return (
-    <MantineProvider withGlobalStyles withNormalizeCSS>
+    <MantineProvider withGlobalStyles withNormalizeCSS theme={{ loader: 'bars' }}>
       <ModalsProvider>
         <AppShell
           styles={{

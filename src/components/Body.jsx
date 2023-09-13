@@ -6,24 +6,27 @@ import HomePage from "../pages/HomePage";
 import CustomHeader from "./Header";
 import DrinksPage from "../pages/DrinksPage";
 import FastFood from "../pages/FastfoodPage";
+import Admin from "../admin/Admin";
 
 const Body = () => {
   const path = window.location.pathname;
   return (
     <>
-      <CustomHeader />
+      {!path.includes("/admin") && <CustomHeader />}
+
       {path.includes("/drinks") ? (
-        <DrinksPage/>
+        <DrinksPage />
       ) : path.includes("/fastfood") ? (
-        <FastFood/>
+        <FastFood />
+      ) : path.includes("/admin") ? (
+        <Admin />
       ) : (
         <>
           <CarouselCustom />
           <HomePage />
         </>
       )}
-
-      <CustomFooter />
+      {!path.includes("/admin") && <CustomFooter />}
     </>
   );
 };

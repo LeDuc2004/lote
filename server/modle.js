@@ -18,7 +18,6 @@ app.get("/user", authenToken, (req, res) => {
     });
 });
 
-
 app.post("/resgister", (req, res) => {
   const { email, password, bag } = req.body;
   const user = {
@@ -90,6 +89,15 @@ app.post("/login", (req, res) => {
     });
 
   // res.status(200).send({ accessToken });
+});
+
+app.get("/authenAdmin", authenToken, (req, res) => {
+  const id = req.user.id;
+  if (id == 9999) {
+    res.status(200).send("ok");
+  } else {
+    res.send(201).send("qq");
+  }
 });
 
 function authenToken(req, res, next) {
